@@ -1,5 +1,6 @@
 import pandas as pd
 import plotly.graph_objects as go
+import plotly.io as pio
 
 dataset = pd.read_csv('total-alcohol-consumption-per-capita-litres-of-pure-alcohol.csv')
 
@@ -34,4 +35,4 @@ fig.update_layout(
     )]
 )
 
-fig.show()
+pio.write_html(fig, file = 'index.html', auto_open = True)
